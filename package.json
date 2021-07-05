@@ -1,0 +1,22 @@
+{
+  "name": "apicrmn",
+  "version": "1.0.0",
+  "description": "CRUD ",
+  "main": "index.js",
+
+
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Isael G",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
