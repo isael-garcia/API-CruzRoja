@@ -2,23 +2,30 @@
   "name": "apicrmn",
   "version": "1.0.0",
   "description": "CRUD ",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "author": "Isael G",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "dotenv": "^10.0.0",
+    "connect-flash": "^0.1.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
     "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
     "mongoose": "^5.13.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "validatorjs": "^3.22.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.9"
+    "nodemon": "^2.0.9",
+    "dotenv": "^10.0.0",
+    "express-handlebars": "^5.3.2"
   }
 }
