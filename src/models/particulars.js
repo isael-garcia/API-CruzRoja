@@ -18,5 +18,5 @@ const {Schema, model} = require('mongoose')
        timestamps: true, 
     })
 
-const particularsModel = mongoose.model('particulars', particularsSchema)
-module.exports = {particularsSchema, particularsModel }
+
+module.exports = model('particulars', particularsSchema)

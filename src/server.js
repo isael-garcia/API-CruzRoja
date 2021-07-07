@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express')
 const exphbs = require('express-handlebars');
+const morgan = require('morgan')
 //inicializacion
 const app = express()
 //settings
@@ -16,10 +17,13 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs')
 //Middlewares
 app.use(express.urlencoded({extended:false}))
+app.use(morgan('dev'))
 //Global Variables
 
 //routes
 app.use(require('./routes/index.routes'))
+app.use(require('./routes/particulars.routes'))// ruta para agregar un nuevo paciente
+
 //Static files
 app.use(express.static(path.join(__dirname, 'public')))
 
