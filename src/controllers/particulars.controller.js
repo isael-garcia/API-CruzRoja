@@ -1,5 +1,6 @@
 const particularsCtrl = { }
 
+const particulars = require('../models/particulars')
 const patient = require('../models/particulars') //modelo de registro
 //controladores donde programamos las funciones para cada ruta
 particularsCtrl.renderPatientsForm = (req,res) => {
@@ -7,12 +8,14 @@ particularsCtrl.renderPatientsForm = (req,res) => {
 }
 particularsCtrl.createNewPatient = async (req,res) => { //nuevo paciente
     const {name, age, sex} = req.body
-    const newPatient = new patient({name, age, sex, })
+    const newPatient = new patient({name, age, sex,})
     await newPatient.save();
     res.send('new patient')
 }
-particularsCtrl.renderPatients = (req,res) =>{
-    res.send('render patients')
+particularsCtrl.renderPatients = async (req,res) =>{
+    const patients = await  particulars.find().lean();
+   res.render('particulars/all-patients', { patients })
+
 }
 particularsCtrl.renderEditForm = (req, res) =>{
     res.send('edit form')
