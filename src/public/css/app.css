@@ -17,7 +17,7 @@
   font-weight: 800;
   padding: 0.5em 1.2em;
   background: rgba(0, 0, 0, 0);
-  border-color: red;
+  border-color: rgb(236, 6, 6);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   position: relative;
